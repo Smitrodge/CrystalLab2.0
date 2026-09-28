@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crystallab-react
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crystallab-react
+  template:
+    metadata:
+      labels:
+        app: crystallab-react
+    spec:
+      containers:
+      - name: web
+        image: nginx:alpine
+        ports:
+        - containerPort: 80

@@ -1,0 +1,707 @@
+.unit-cell-content {
+  flex: 1;
+  min-width: 0;
+  padding: 42px 50px 80px;
+  color: #dceeff;
+  overflow-x: hidden;
+  background: #111827;
+}
+
+/* ================================
+   BREADCRUMB
+================================ */
+
+.unit-cell-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 35px;
+  color: #7695b2;
+  font-size: 13px;
+}
+
+.unit-cell-breadcrumb span:first-child {
+  color: #38bdf8;
+  font-size: 16px;
+}
+
+.unit-cell-breadcrumb b {
+  color: #4f7190;
+}
+
+.unit-cell-breadcrumb strong {
+  color: #d8efff;
+}
+
+
+/* ================================
+   INTRO
+================================ */
+
+.unit-cell-intro {
+  max-width: 900px;
+}
+
+.unit-cell-badge {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 6px;
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.unit-cell-intro h1 {
+  margin-top: 15px;
+  color: #f1f7ff;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.unit-cell-intro p {
+  margin-top: 16px;
+  max-width: 850px;
+  color: #a9c2d9;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+
+/* ================================
+   DEFINITION
+================================ */
+
+.unit-cell-definition {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  max-width: 900px;
+  margin-top: 42px;
+  padding: 27px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background: rgba(9, 39, 72, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.definition-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  color: #38d5f5;
+  font-size: 24px;
+}
+
+.definition-content h2 {
+  color: #e9f7ff;
+  font-size: 22px;
+}
+
+.definition-content p {
+  margin-top: 10px;
+  color: #a7bfd5;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.definition-content strong {
+  color: #38d5f5;
+}
+
+
+/* ================================
+   IMPORTANT POINTS
+================================ */
+
+.unit-cell-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin-top: 28px;
+}
+
+.unit-point {
+  padding: 22px;
+  border-radius: 14px;
+  background: rgba(8, 31, 57, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  transition: 0.25s ease;
+}
+
+.unit-point:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 140, 255, 0.08);
+}
+
+.unit-point > span {
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.unit-point h3 {
+  margin-top: 13px;
+  color: #e5f4ff;
+  font-size: 17px;
+}
+
+.unit-point p {
+  margin-top: 8px;
+  color: #91abc2;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* ================================
+   TRANSITION
+================================ */
+
+.unit-cell-transition {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 900px;
+  margin: 55px 0 30px;
+}
+
+.unit-cell-transition span {
+  flex: 1;
+  height: 1px;
+  background: rgba(56, 189, 248, 0.18);
+}
+
+.unit-cell-transition b {
+  color: #5e9abb;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+
+/* ================================
+   CRYSTAL LATTICE 3D
+================================ */
+
+.unit-visual-section {
+  width: 100%;
+  max-width: 1050px;
+  margin-top: 35px;
+}
+
+.visual-heading {
+  margin-bottom: 18px;
+}
+
+.visual-heading > span {
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.visual-heading h2 {
+  margin-top: 7px;
+  color: #eaf7ff;
+  font-size: 26px;
+}
+
+.visual-heading p {
+  margin-top: 7px;
+  color: #91abc2;
+  font-size: 14px;
+}
+
+.lattice-three {
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 18px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(14, 116, 220, 0.18),
+      transparent 65%
+    ),
+    #050f20;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.lattice-three canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.visual-legend {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 13px;
+  color: #9db7d0;
+  font-size: 12px;
+}
+
+.visual-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.visual-legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.blue-dot {
+  background: #22aaff;
+  box-shadow: 0 0 8px #22aaff;
+}
+
+.yellow-dot {
+  background: #ffc928;
+  box-shadow: 0 0 8px #ffc928;
+}
+
+
+/* ================================
+   PARAMETERS
+================================ */
+
+.unit-cell-parameters {
+  width: 100%;
+  max-width: 1050px;
+  margin: 80px 0 70px;
+}
+
+.parameters-heading {
+  max-width: 760px;
+  margin-bottom: 32px;
+}
+
+.parameters-heading > span {
+  color: #38bdf8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.parameters-heading h2 {
+  margin: 8px 0 10px;
+  color: #eaf6ff;
+  font-size: 30px;
+}
+
+.parameters-heading p {
+  margin: 0;
+  color: #7893aa;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* ================================
+   PARAMETERS LAYOUT
+================================ */
+
+.parameters-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+
+/* ================================
+   LEFT THEORY
+================================ */
+
+.parameters-theory {
+  padding: 26px;
+  border: 1px solid rgba(56, 189, 248, 0.13);
+  border-radius: 18px;
+  background: rgba(10, 27, 45, 0.7);
+  box-sizing: border-box;
+}
+
+.parameters-theory > h3 {
+  margin: 0 0 7px;
+  color: #eaf6ff;
+  font-size: 21px;
+}
+
+.parameters-intro {
+  margin: 0 0 22px;
+  color: #7893aa;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* ================================
+   PARAMETER ITEM
+================================ */
+
+.parameter-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.parameter-symbol {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.parameter-item h4 {
+  margin: 1px 0 4px;
+  color: #dceeff;
+  font-size: 14px;
+}
+
+.parameter-item p {
+  margin: 0;
+  color: #708aa1;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* ================================
+   EXPLORE BUTTON
+================================ */
+
+.parameter-explore-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 25px;
+  padding: 13px 17px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 10px;
+  color: #dff7ff;
+  background: rgba(56, 189, 248, 0.09);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.parameter-explore-btn span {
+  font-size: 18px;
+}
+
+.parameter-explore-btn:hover {
+  background: rgba(56, 189, 248, 0.16);
+  border-color: rgba(56, 189, 248, 0.65);
+  transform: translateY(-2px);
+}
+
+
+/* ================================
+   RIGHT 3D CARD
+================================ */
+
+.parameter-visual {
+  position: relative;
+  min-width: 0;
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid rgba(56, 189, 248, 0.14);
+  border-radius: 20px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(19, 61, 91, 0.35),
+      rgba(5, 15, 28, 0.95) 72%
+    );
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.2);
+}
+
+.parameter-visual-label {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  z-index: 2;
+}
+
+.parameter-visual-label span {
+  color: #38bdf8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.parameter-visual-label p {
+  margin: 5px 0 0;
+  color: #66839c;
+  font-size: 11px;
+}
+
+
+/* ================================
+   PARAMETER THREE.JS
+================================ */
+
+.parameter-three {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.parameter-three canvas {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+
+/* ================================
+   FLOATING LEGEND
+================================ */
+
+.parameter-floating-info {
+  position: absolute;
+  left: 22px;
+  bottom: 20px;
+  z-index: 2;
+  display: flex;
+  gap: 18px;
+}
+
+.parameter-floating-info span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #718ba2;
+  font-size: 11px;
+}
+
+
+/* =================================================
+   LIGHT MODE
+================================================= */
+
+body.light-mode .unit-cell-content {
+  color: #1e293b;
+  background: #f8fafc;
+}
+
+body.light-mode .unit-cell-breadcrumb {
+  color: #64748b;
+}
+
+body.light-mode .unit-cell-breadcrumb b {
+  color: #94a3b8;
+}
+
+body.light-mode .unit-cell-breadcrumb strong {
+  color: #0f172a;
+}
+
+body.light-mode .unit-cell-intro h1 {
+  color: #0f172a;
+}
+
+body.light-mode .unit-cell-intro p {
+  color: #475569;
+}
+
+body.light-mode .unit-cell-definition {
+  background: #ffffff;
+  border-color: rgba(14, 165, 233, 0.2);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+body.light-mode .definition-content h2 {
+  color: #0f172a;
+}
+
+body.light-mode .definition-content p {
+  color: #475569;
+}
+
+body.light-mode .unit-point {
+  background: #ffffff;
+  border-color: rgba(14, 165, 233, 0.16);
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+body.light-mode .unit-point h3 {
+  color: #0f172a;
+}
+
+body.light-mode .unit-point p {
+  color: #64748b;
+}
+
+body.light-mode .unit-cell-transition span {
+  background: rgba(14, 165, 233, 0.2);
+}
+
+body.light-mode .unit-cell-transition b {
+  color: #64748b;
+}
+
+body.light-mode .visual-heading h2 {
+  color: #0f172a;
+}
+
+body.light-mode .visual-heading p {
+  color: #64748b;
+}
+
+body.light-mode .lattice-three {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(14, 165, 233, 0.12),
+      transparent 65%
+    ),
+    #eaf4fb;
+  border-color: rgba(14, 165, 233, 0.25);
+}
+
+body.light-mode .visual-legend {
+  color: #64748b;
+}
+
+body.light-mode .parameters-heading h2 {
+  color: #0f172a;
+}
+
+body.light-mode .parameters-heading p {
+  color: #64748b;
+}
+
+body.light-mode .parameters-theory {
+  background: #ffffff;
+  border-color: rgba(14, 165, 233, 0.18);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+body.light-mode .parameters-theory > h3 {
+  color: #0f172a;
+}
+
+body.light-mode .parameters-intro {
+  color: #64748b;
+}
+
+body.light-mode .parameter-item h4 {
+  color: #1e293b;
+}
+
+body.light-mode .parameter-item p {
+  color: #64748b;
+}
+
+body.light-mode .parameter-symbol {
+  background: rgba(14, 165, 233, 0.08);
+}
+
+body.light-mode .parameter-explore-btn {
+  color: #0369a1;
+  background: rgba(14, 165, 233, 0.07);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+body.light-mode .parameter-explore-btn:hover {
+  background: rgba(14, 165, 233, 0.13);
+}
+
+body.light-mode .parameter-visual {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(56, 189, 248, 0.15),
+      #edf7fc 72%
+    );
+  border-color: rgba(14, 165, 233, 0.2);
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+body.light-mode .parameter-visual-label p {
+  color: #64748b;
+}
+
+body.light-mode .parameter-floating-info span {
+  color: #64748b;
+}
+
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+
+@media (max-width: 1000px) {
+  .parameters-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .parameter-visual {
+    min-height: 430px;
+  }
+
+  .parameter-three {
+    min-height: 430px;
+  }
+}
+
+@media (max-width: 700px) {
+  .unit-cell-content {
+    padding: 30px 20px 60px;
+  }
+
+  .unit-cell-points {
+    grid-template-columns: 1fr;
+  }
+
+  .parameters-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .parameter-visual {
+    min-height: 380px;
+  }
+
+  .parameter-three {
+    min-height: 380px;
+  }
+}

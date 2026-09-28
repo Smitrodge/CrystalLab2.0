@@ -1,0 +1,727 @@
+.solid-content {
+  flex: 1;
+  min-width: 0;
+
+  padding: 32px 42px 60px;
+
+  background: #061b34;
+
+  overflow-y: auto;
+}
+
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+.solid-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 28px;
+
+  color: #38bdf8;
+
+  font-size: 15px;
+}
+
+.solid-breadcrumb span:first-child {
+  font-size: 19px;
+}
+
+.solid-breadcrumb b {
+  color: #6485a4;
+}
+
+.solid-breadcrumb span:last-child {
+  color: #dbeafe;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.solid-intro {
+  max-width: 850px;
+}
+
+.solid-badge {
+  display: inline-flex;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #178cf5,
+    #0b6fd3
+  );
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.solid-intro h1 {
+  margin: 12px 0 8px;
+
+  color: #f1f7ff;
+
+  font-size: 44px;
+  line-height: 1.1;
+}
+
+.solid-intro p {
+  max-width: 760px;
+
+  color: #b9cde1;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   TYPES
+========================= */
+
+.solid-types {
+  width: 100%;
+  max-width: 850px;
+
+  margin-top: 45px;
+}
+
+.solid-types h2 {
+  color: #f1f7ff;
+
+  font-size: 28px;
+
+  margin-bottom: 7px;
+}
+
+.solid-description {
+  color: #b9cde1;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   SOLID TREE
+========================= */
+
+.solid-tree {
+  width: 100%;
+
+  margin-top: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px 20px 5px;
+}
+
+
+/* ROOT */
+
+.solid-tree-root {
+  min-width: 130px;
+
+  padding: 12px 28px;
+
+  border-radius: 9px;
+
+  background: linear-gradient(
+    135deg,
+    #168af0,
+    #086bc9
+  );
+
+  color: white;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  text-align: center;
+
+  box-shadow:
+    0 8px 22px rgba(14, 116, 220, 0.25);
+}
+
+
+/* CONNECTOR */
+
+.solid-tree-connector {
+  width: 70%;
+  height: 48px;
+
+  position: relative;
+}
+
+
+/* HORIZONTAL */
+
+.solid-tree-connector::before {
+  content: "";
+
+  position: absolute;
+
+  top: 24px;
+
+  left: 25%;
+  right: 25%;
+
+  height: 2px;
+
+  background: #45aee8;
+}
+
+
+/* CENTER */
+
+.solid-tree-connector::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 2px;
+  height: 25px;
+
+  background: #45aee8;
+}
+
+
+/* CHILD LINES */
+
+.solid-tree-connector span {
+  position: absolute;
+
+  top: 24px;
+
+  width: 2px;
+  height: 24px;
+
+  background: #45aee8;
+}
+
+.solid-tree-connector span:first-child {
+  left: 25%;
+}
+
+.solid-tree-connector span:last-child {
+  right: 25%;
+}
+
+
+/* ITEMS */
+
+.solid-tree-items {
+  width: 70%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.solid-tree-item {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #d8ebfc;
+
+  font-size: 16px;
+
+  text-align: center;
+}
+
+.solid-tree-item span {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #22c7f0;
+
+  box-shadow:
+    0 0 9px rgba(34, 199, 240, 0.8);
+}
+
+
+/* =========================
+   TYPE CARDS
+========================= */
+
+.solid-type-card {
+  width: 100%;
+  max-width: 850px;
+
+  margin-top: 30px;
+
+  padding: 25px 26px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border-radius: 14px;
+
+  background: rgba(9, 39, 72, 0.85);
+
+  border: 1px solid rgba(56, 189, 248, 0.2);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* TEXT */
+
+.solid-type-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.solid-type-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.solid-number {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(14, 165, 233, 0.15);
+
+  color: #38bdf8;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.solid-type-heading h2 {
+  color: #f1f7ff;
+
+  font-size: 25px;
+}
+
+.solid-type-text p {
+  max-width: 470px;
+
+  color: #b9cde1;
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.solid-type-image {
+  width: 260px;
+  height: 180px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(14, 165, 233, 0.12),
+      transparent 65%
+    ),
+    #0b294b;
+
+  border: 1px dashed rgba(56, 189, 248, 0.35);
+
+  color: #7fa6c9;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+  .solid-content {
+    padding: 25px 18px 45px;
+  }
+
+  .solid-intro h1 {
+    font-size: 36px;
+  }
+
+  .solid-tree {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .solid-tree-connector,
+  .solid-tree-items {
+    width: 95%;
+  }
+
+  .solid-tree-item {
+    font-size: 13px;
+  }
+
+  .solid-type-card {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .solid-type-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .solid-type-text p {
+    max-width: none;
+  }
+
+}
+
+/* =========================
+   COMPARISON TABLE
+========================= */
+
+.solid-comparison {
+  width: 100%;
+  max-width: 850px;
+
+  margin-top: 45px;
+}
+
+
+.comparison-heading {
+  margin-bottom: 22px;
+}
+
+
+.comparison-heading > span {
+  color: #38bdf8;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.comparison-heading h2 {
+  margin-top: 8px;
+
+  color: #f1f7ff;
+
+  font-size: 28px;
+}
+
+
+.comparison-heading p {
+  margin-top: 7px;
+
+  color: #9db7d0;
+
+  font-size: 15px;
+}
+
+
+/* TABLE */
+
+.comparison-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(56, 189, 248, 0.2);
+
+  background: rgba(9, 39, 72, 0.75);
+}
+
+
+.comparison-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 650px;
+}
+
+
+/* HEADER */
+
+.comparison-table thead {
+  background: rgba(14, 116, 220, 0.25);
+}
+
+
+.comparison-table th {
+  padding: 17px 18px;
+
+  color: #e8f5ff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-align: left;
+
+  border-bottom: 1px solid
+    rgba(56, 189, 248, 0.25);
+}
+
+
+/* CELLS */
+
+.comparison-table td {
+  padding: 17px 18px;
+
+  color: #b9cde1;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  vertical-align: top;
+
+  border-bottom: 1px solid
+    rgba(56, 189, 248, 0.1);
+}
+
+
+/* FIRST COLUMN */
+
+.comparison-table td:first-child {
+  width: 23%;
+
+  color: #7dd3fc;
+
+  font-weight: 600;
+}
+
+
+/* HOVER */
+
+.comparison-table tbody tr {
+  transition: 0.25s ease;
+}
+
+.comparison-table tbody tr:hover {
+  background: rgba(34, 211, 238, 0.06);
+}
+
+
+/* LAST ROW */
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light-mode .comparison-heading h2 {
+  color: #102d52;
+}
+
+body.light-mode .comparison-heading p {
+  color: #527392;
+}
+
+body.light-mode .comparison-table-wrapper {
+  background: rgba(255, 255, 255, 0.85);
+
+  border-color: rgba(14, 165, 233, 0.2);
+}
+
+body.light-mode .comparison-table thead {
+  background: rgba(14, 165, 233, 0.1);
+}
+
+body.light-mode .comparison-table th {
+  color: #164b7d;
+
+  border-color: rgba(14, 165, 233, 0.2);
+}
+
+body.light-mode .comparison-table td {
+  color: #456783;
+
+  border-color: rgba(14, 165, 233, 0.12);
+}
+
+body.light-mode .comparison-table td:first-child {
+  color: #0879c9;
+}
+
+body.light-mode .comparison-table tbody tr:hover {
+  background: rgba(14, 165, 233, 0.05);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .solid-comparison {
+    margin-top: 35px;
+  }
+
+  .comparison-heading h2 {
+    font-size: 24px;
+  }
+
+}
+
+/* =========================
+   SOLIDS - LIGHT MODE
+========================= */
+
+body.light-mode .solid-content {
+  background: #f8fafc;
+}
+
+
+/* BREADCRUMB */
+
+body.light-mode .solid-breadcrumb {
+  color: #0284c7;
+}
+
+body.light-mode .solid-breadcrumb b {
+  color: #64748b;
+}
+
+body.light-mode .solid-breadcrumb span:last-child {
+  color: #334155;
+}
+
+
+/* INTRO */
+
+body.light-mode .solid-intro h1 {
+  color: #102d52;
+}
+
+body.light-mode .solid-intro p {
+  color: #527392;
+}
+
+
+/* TYPES */
+
+body.light-mode .solid-types h2 {
+  color: #102d52;
+}
+
+body.light-mode .solid-description {
+  color: #527392;
+}
+
+
+/* TREE */
+
+body.light-mode .solid-tree-item {
+  color: #334155;
+}
+
+
+/* TYPE CARDS */
+
+body.light-mode .solid-type-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(14, 165, 233, 0.2);
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+body.light-mode .solid-type-heading h2 {
+  color: #102d52;
+}
+
+body.light-mode .solid-type-text p {
+  color: #527392;
+}
+
+
+/* IMAGE */
+
+body.light-mode .solid-type-image {
+  background:
+    radial-gradient(
+      circle,
+      rgba(14, 165, 233, 0.10),
+      transparent 65%
+    ),
+    #eaf4fb;
+
+  border-color: rgba(14, 165, 233, 0.3);
+
+  color: #527392;
+}
+
+/* =========================
+   IMAGE FIX
+========================= */
+
+.solid-type-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}

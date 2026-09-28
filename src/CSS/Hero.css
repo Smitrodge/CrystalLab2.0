@@ -1,0 +1,157 @@
+.hero {
+
+   min-height: calc(100vh - 72px);
+  margin-top: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 60px 7%;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(0, 240, 255, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 15% 70%,
+      rgba(99, 102, 241, 0.08),
+      transparent 30%
+    ),
+    #020617;
+}
+
+.hero-content {
+  width: 50%;
+  max-width: 650px;
+}
+
+.hero-content h1 {
+  font-size: clamp(48px, 5vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 26px;
+  color: #f8fafc;
+}
+
+.hero-content h1 span {
+  display: block;
+  color: #38bdf8;
+}
+
+.hero-content p {
+  max-width: 600px;
+
+  color: #cbd5e1;
+
+  font-size: 18px;
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+}
+
+.hero-content button {
+  padding: 15px 30px;
+
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #38bdf8,
+    #06b6d4
+  );
+
+  color: #020617;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.hero-content button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 25px rgba(56, 189, 248, 0.45),
+    0 10px 30px rgba(14, 165, 233, 0.2);
+}
+
+.hero-visual {
+  position: relative;
+
+  width: 560px;
+  height: 560px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  background: rgba(56, 189, 248, 0.08);
+
+  filter: blur(80px);
+}
+
+.hero-visual canvas {
+  position: relative;
+  z-index: 2;
+  transform: scale(1.15);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-visual {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+body.light-mode .hero {
+  background:
+    radial-gradient(circle at 75% 45%, rgba(14, 165, 233, 0.12), transparent 30%),
+    radial-gradient(circle at 15% 70%, rgba(99, 102, 241, 0.08), transparent 30%),
+    #f1f5f9;
+}
+
+body.light-mode .hero-content h1 {
+  color: #0f172a;
+}
+
+body.light-mode .hero-content p {
+  color: #475569;
+}
+
+.page-content {
+  padding-top: 72px;
+}

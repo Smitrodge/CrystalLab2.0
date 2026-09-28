@@ -1,0 +1,681 @@
+/* ================================
+   CRYSTALLINE CONTENT
+================================ */
+
+.crystalline-content {
+  flex: 1;
+  min-width: 0;
+  padding: 38px 48px 70px;
+  background: #061b34;
+  color: #dceeff;
+}
+
+
+/* ================================
+   BREADCRUMB
+================================ */
+
+.crystalline-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 34px;
+
+  color: #7896b2;
+  font-size: 13px;
+}
+
+.crystalline-breadcrumb b {
+  color: #3b82f6;
+}
+
+.crystalline-breadcrumb strong {
+  color: #7dd3fc;
+  font-weight: 600;
+}
+
+
+/* ================================
+   INTRO
+================================ */
+
+.crystalline-intro {
+  max-width: 820px;
+}
+
+.crystalline-badge {
+  display: inline-block;
+  padding: 6px 11px;
+
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  border-radius: 6px;
+
+  color: #22d3ee;
+  background: rgba(34, 211, 238, 0.08);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.crystalline-intro h1 {
+  margin: 15px 0 15px;
+
+  color: #f2f8ff;
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.crystalline-intro p {
+  max-width: 780px;
+
+  margin: 0 0 12px;
+
+  color: #a9bfd3;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.crystalline-intro strong {
+  color: #7dd3fc;
+}
+
+
+/* ================================
+   KEY CONCEPTS
+================================ */
+
+.crystalline-concept {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  max-width: 850px;
+  margin-top: 34px;
+}
+
+.concept-item {
+  display: flex;
+  gap: 13px;
+
+  padding: 19px;
+
+  background: rgba(9, 39, 72, 0.72);
+  border: 1px solid rgba(56, 189, 248, 0.14);
+  border-radius: 12px;
+
+  transition: 0.25s ease;
+}
+
+.concept-item:hover {
+  border-color: rgba(34, 211, 238, 0.4);
+  transform: translateY(-2px);
+}
+
+.concept-item > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 32px;
+  height: 32px;
+
+  border-radius: 8px;
+
+  color: #22d3ee;
+  background: rgba(34, 211, 238, 0.1);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.concept-item h3 {
+  margin: 1px 0 6px;
+
+  color: #e9f5ff;
+  font-size: 14px;
+}
+
+.concept-item p {
+  margin: 0;
+
+  color: #8ea9c1;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* ================================
+   EXAMPLES
+================================ */
+
+.crystalline-examples {
+  max-width: 850px;
+  margin-top: 42px;
+}
+
+.section-label {
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.crystalline-examples h2 {
+  margin: 8px 0 18px;
+
+  color: #edf7ff;
+  font-size: 24px;
+}
+
+.example-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.example-list span {
+  padding: 9px 15px;
+
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+
+  background: rgba(9, 39, 72, 0.7);
+  color: #9ddcff;
+
+  font-size: 13px;
+}
+
+
+/* ================================
+   CRYSTALLINE VIDEO
+================================ */
+
+.crystalline-video-section {
+  max-width: 850px;
+  margin-top: 50px;
+}
+
+.crystalline-video-section h2 {
+  margin: 8px 0 8px;
+
+  color: #edf7ff;
+  font-size: 27px;
+}
+
+.crystalline-video-section > p {
+  margin: 0 0 20px;
+
+  color: #91abc2;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.crystalline-video-box {
+  width: 100%;
+  max-width: 760px;
+
+  padding: 8px;
+
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 16px;
+
+  background: rgba(5, 23, 43, 0.8);
+  overflow: hidden;
+}
+
+.crystalline-video-box img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 11px;
+}
+
+.video-caption {
+  margin-top: 11px;
+
+  color: #7895ad;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* ================================
+   DIVIDER
+================================ */
+
+.concept-divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  max-width: 850px;
+  margin: 58px 0 52px;
+}
+
+.concept-divider span {
+  height: 1px;
+  flex: 1;
+
+  background: rgba(56, 189, 248, 0.16);
+}
+
+.concept-divider b {
+  color: #537895;
+
+  font-size: 10px;
+  letter-spacing: 1.2px;
+
+  white-space: nowrap;
+}
+
+
+/* ================================
+   CRYSTAL LATTICE
+================================ */
+
+.crystal-lattice-section {
+  max-width: 850px;
+}
+
+.crystal-lattice-section h2 {
+  margin: 8px 0 10px;
+
+  color: #edf7ff;
+  font-size: 30px;
+}
+
+.lattice-intro {
+  max-width: 750px;
+
+  margin: 0 0 25px;
+
+  color: #9bb3c9;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* ================================
+   LATTICE DEFINITION CARD
+================================ */
+
+.lattice-definition {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  padding: 24px;
+
+  border: 1px solid rgba(34, 211, 238, 0.18);
+  border-radius: 14px;
+
+  background: rgba(9, 39, 72, 0.72);
+}
+
+.lattice-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 45px;
+  height: 45px;
+
+  border-radius: 12px;
+
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
+
+  font-size: 22px;
+}
+
+.lattice-definition h3 {
+  margin: 0 0 8px;
+
+  color: #e9f6ff;
+  font-size: 18px;
+}
+
+.lattice-definition p {
+  margin: 0;
+
+  color: #9db6cc;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.lattice-definition strong {
+  color: #7dd3fc;
+}
+
+
+/* ================================
+   LATTICE POINT
+================================ */
+
+.lattice-point-section {
+  margin-top: 35px;
+  padding-left: 4px;
+}
+
+.lattice-point-section h3 {
+  margin-bottom: 8px;
+
+  color: #dff3ff;
+  font-size: 20px;
+}
+
+.lattice-point-section p {
+  max-width: 780px;
+
+  margin: 0;
+
+  color: #9db6cc;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.lattice-point-section strong {
+  color: #7dd3fc;
+}
+
+
+/* ================================
+   LATTICE PROPERTIES
+================================ */
+
+.lattice-properties {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.lattice-properties > div {
+  padding: 19px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.13);
+
+  background: rgba(8, 35, 65, 0.65);
+}
+
+.lattice-properties span {
+  color: #22d3ee;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.lattice-properties h4 {
+  margin: 8px 0 6px;
+
+  color: #e7f5ff;
+  font-size: 15px;
+}
+
+.lattice-properties p {
+  margin: 0;
+
+  color: #819db5;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* ================================
+   LATTICE VIDEO
+================================ */
+
+.lattice-video-section {
+  max-width: 850px;
+  margin-top: 50px;
+}
+
+.lattice-video-section h2 {
+  margin: 8px 0;
+
+  color: #edf7ff;
+  font-size: 27px;
+}
+
+.lattice-video-section > p {
+  margin: 0 0 20px;
+
+  color: #91abc2;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.lattice-video-box {
+  width: 100%;
+  max-width: 760px;
+
+  padding: 8px;
+
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 16px;
+
+  background: rgba(5, 23, 43, 0.8);
+  overflow: hidden;
+}
+
+.lattice-video-box img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 11px;
+}
+
+.lattice-video-section .video-caption {
+  margin-top: 11px;
+}
+
+
+/* ================================
+   NEXT CONCEPT
+================================ */
+
+.next-concept {
+  max-width: 850px;
+
+  margin-top: 58px;
+  padding: 27px;
+
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 15px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(14, 116, 220, 0.13),
+    rgba(34, 211, 238, 0.04)
+  );
+}
+
+.next-concept > span {
+  color: #22d3ee;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.next-concept h3 {
+  margin: 9px 0 8px;
+
+  color: #eaf7ff;
+  font-size: 20px;
+}
+
+.next-concept p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #91aac1;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.next-concept strong {
+  color: #7dd3fc;
+}
+
+
+/* ================================
+   LIGHT MODE
+================================ */
+
+body.light-mode .crystalline-content {
+  background: #eef5fc;
+  color: #173451;
+}
+
+body.light-mode .crystalline-breadcrumb {
+  color: #6d879f;
+}
+
+body.light-mode .crystalline-breadcrumb strong {
+  color: #087fc1;
+}
+
+body.light-mode .crystalline-intro h1,
+body.light-mode .crystalline-examples h2,
+body.light-mode .crystalline-video-section h2,
+body.light-mode .crystal-lattice-section h2,
+body.light-mode .lattice-video-section h2 {
+  color: #102d52;
+}
+
+body.light-mode .crystalline-intro p,
+body.light-mode .crystalline-video-section > p,
+body.light-mode .lattice-intro,
+body.light-mode .lattice-point-section p,
+body.light-mode .lattice-video-section > p {
+  color: #58728c;
+}
+
+body.light-mode .crystalline-intro strong,
+body.light-mode .lattice-point-section strong {
+  color: #087fc1;
+}
+
+body.light-mode .concept-item,
+body.light-mode .lattice-definition,
+body.light-mode .lattice-properties > div {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(14, 165, 233, 0.16);
+}
+
+body.light-mode .concept-item h3,
+body.light-mode .lattice-definition h3,
+body.light-mode .lattice-point-section h3,
+body.light-mode .lattice-properties h4 {
+  color: #16466d;
+}
+
+body.light-mode .concept-item p,
+body.light-mode .lattice-definition p,
+body.light-mode .lattice-properties p {
+  color: #668199;
+}
+
+body.light-mode .example-list span {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(14, 165, 233, 0.18);
+  color: #0879b8;
+}
+
+body.light-mode .crystalline-video-box,
+body.light-mode .lattice-video-box {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(14, 165, 233, 0.2);
+}
+
+body.light-mode .concept-divider span {
+  background: rgba(14, 165, 233, 0.18);
+}
+
+body.light-mode .concept-divider b {
+  color: #66839b;
+}
+
+body.light-mode .next-concept {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(14, 165, 233, 0.2);
+}
+
+body.light-mode .next-concept h3 {
+  color: #16466d;
+}
+
+body.light-mode .next-concept p {
+  color: #668199;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .crystalline-content {
+    padding: 32px 28px 60px;
+  }
+
+  .crystalline-concept {
+    grid-template-columns: 1fr;
+  }
+
+  .lattice-properties {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .crystalline-content {
+    padding: 25px 18px 50px;
+  }
+
+  .crystalline-intro h1 {
+    font-size: 30px;
+  }
+
+  .crystalline-intro p {
+    font-size: 14px;
+  }
+
+  .crystalline-video-section h2,
+  .lattice-video-section h2 {
+    font-size: 23px;
+  }
+
+  .crystal-lattice-section h2 {
+    font-size: 26px;
+  }
+
+  .lattice-definition {
+    padding: 18px;
+  }
+
+  .concept-divider {
+    margin: 45px 0 38px;
+  }
+
+  .concept-divider b {
+    font-size: 8px;
+  }
+
+  .next-concept {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,34 @@
+src/
+│
+├── pages/
+│   │
+│   ├── Home/
+│   │   ├── Home.jsx
+│   │   └── components/
+│   │       ├── Navbar.jsx
+│   │       ├── Hero.jsx
+│   │       ├── ShortLearning.jsx
+│   │       └── Footer.jsx
+│   │
+│   ├── Learning/
+│   │   ├── Learning.jsx
+│   │   └── components/
+│   │       ├── TopicTree.jsx
+│   │       └── TopicContent.jsx
+│   │
+│   └── 3DPractical/
+│       ├── Practical.jsx
+│       └── components/
+│           ├── CrystalViewer.jsx
+│           ├── StructureSelector.jsx
+│           └── ParameterPanel.jsx
+│
+├── css/
+│   ├── global.css
+│   ├── navbar.css
+│   ├── home.css
+│   ├── learning.css
+│   └── practical.css
+│
+├── App.jsx
+└── main.jsx

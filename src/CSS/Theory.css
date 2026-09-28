@@ -1,0 +1,17 @@
+.theory-page {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  background: #f1f5f9;
+}
+
+.theory-placeholder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 24px;
+}
+.theory-page {
+  padding-top: 72px;
+}

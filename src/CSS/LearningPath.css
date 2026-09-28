@@ -1,0 +1,565 @@
+.learning-path {
+  position: relative;
+  min-height: 100vh;
+  padding: 150px 8% 220px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(99, 102, 241, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(0, 240, 255, 0.07),
+      transparent 30%
+    ),
+    #08111f;
+
+  overflow: hidden;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.learning-intro {
+  max-width: 750px;
+  margin: 0 auto 130px;
+  text-align: center;
+}
+
+.learning-intro > span {
+  display: inline-block;
+  color: #67e8f9;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.learning-intro h2 {
+  font-size: clamp(38px, 4vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #f8fafc;
+  margin-bottom: 22px;
+}
+
+.learning-intro h2 strong {
+  color: #38bdf8;
+}
+
+.learning-intro p {
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   JOURNEY
+========================= */
+
+.learning-journey {
+  position: relative;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.journey-line {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 2px;
+  height: calc(100% - 20px);
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #38bdf8,
+    #6366f1,
+    #38bdf8,
+    transparent
+  );
+
+  box-shadow:
+    0 0 15px rgba(56, 189, 248, 0.35);
+}
+
+
+/* =========================
+   STEP
+========================= */
+
+.learning-step {
+  position: relative;
+
+  width: 50%;
+  min-height: 320px;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+
+  transform: translateY(70px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.learning-step.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* LEFT SIDE */
+
+.learning-step.left {
+  padding-right: 75px;
+
+  justify-content: flex-end;
+
+  text-align: right;
+}
+
+
+/* RIGHT SIDE */
+
+.learning-step.right {
+  margin-left: 50%;
+
+  padding-left: 75px;
+
+  justify-content: flex-start;
+
+  text-align: left;
+}
+
+
+/* =========================
+   NUMBER NODE
+========================= */
+
+.step-number {
+  position: absolute;
+
+  top: 50%;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background: #07111f;
+
+  border: 2px solid #38bdf8;
+
+  color: #67e8f9;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow:
+    0 0 0 7px rgba(56, 189, 248, 0.06),
+    0 0 25px rgba(56, 189, 248, 0.25);
+
+  z-index: 3;
+}
+
+
+/* LEFT NODE */
+
+.learning-step.left .step-number {
+  right: -29px;
+}
+
+
+/* RIGHT NODE */
+
+.learning-step.right .step-number {
+  left: -29px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.step-content {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 36px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(30, 41, 59, 0.75),
+      rgba(15, 23, 42, 0.45)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+
+  transition: 0.3s ease;
+}
+
+
+/* LEFT CARD TEXT */
+
+.learning-step.left .step-content {
+  text-align: right;
+}
+
+
+/* RIGHT CARD TEXT */
+
+.learning-step.right .step-content {
+  text-align: left;
+}
+
+
+/* CARD HOVER */
+
+.step-content:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(56, 189, 248, 0.5);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(56, 189, 248, 0.08);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.step-content span {
+  color: #67e8f9;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.step-content h3 {
+  margin: 14px 0;
+
+  color: #f8fafc;
+
+  font-size: 26px;
+}
+
+.step-content p {
+  color: #cbd5e1;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================
+   DESTINATION
+========================= */
+
+.learning-destination {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.destination-node {
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: #38bdf8;
+
+  border: 4px solid #08111f;
+
+  box-shadow:
+    0 0 0 3px rgba(56, 189, 248, 0.35),
+    0 0 25px rgba(56, 189, 248, 0.6);
+
+  z-index: 3;
+}
+
+.destination-card {
+  margin-top: 28px;
+
+  width: min(520px, 90%);
+
+  padding: 35px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(14, 116, 144, 0.18),
+      rgba(79, 70, 229, 0.15)
+    );
+
+  border: 1px solid rgba(103, 232, 249, 0.2);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.destination-card span {
+  color: #67e8f9;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.destination-card h3 {
+  margin: 12px 0;
+
+  color: #f8fafc;
+
+  font-size: 28px;
+}
+
+.destination-card p {
+  color: #cbd5e1;
+
+  line-height: 1.7;
+
+  margin-bottom: 24px;
+}
+
+.destination-button {
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #38bdf8,
+    #06b6d4
+  );
+
+  color: #02111d;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.destination-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 25px rgba(56, 189, 248, 0.4);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .learning-path {
+    padding: 100px 6% 150px;
+  }
+
+  .learning-intro {
+    margin-bottom: 80px;
+  }
+
+  .journey-line {
+    left: 20px;
+    height: calc(100% - 10px);
+  }
+
+  .learning-step,
+  .learning-step.left,
+  .learning-step.right {
+
+    width: 100%;
+
+    margin-left: 0;
+
+    padding-left: 65px;
+    padding-right: 0;
+
+    min-height: 270px;
+
+    text-align: left;
+
+    justify-content: flex-start;
+  }
+
+  .learning-step.left .step-number,
+  .learning-step.right .step-number {
+
+    left: -9px;
+    right: auto;
+  }
+
+  .learning-step.left .step-content,
+  .learning-step.right .step-content {
+
+    text-align: left;
+  }
+
+  .step-content {
+    max-width: none;
+  }
+
+  .destination-card {
+    margin-left: 30px;
+    width: calc(100% - 30px);
+  }
+}
+
+body.light-mode .learning-path {
+  background: #eaf2f8;
+}
+
+body.light-mode .learning-intro h2 {
+  color: #0f172a;
+}
+
+body.light-mode .learning-intro p {
+  color: #475569;
+}
+
+body.light-mode .step-content {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(14, 165, 233, 0.25);
+}
+
+body.light-mode .step-content h3 {
+  color: #0f172a;
+}
+
+body.light-mode .step-content p {
+  color: #475569;
+}
+
+body.light-mode .step-content span {
+  color: #0284c7;
+}
+
+body.light-mode .destination-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(14, 165, 233, 0.25);
+}
+
+body.light-mode .destination-card h3 {
+  color: #0f172a;
+}
+
+body.light-mode .destination-card p {
+  color: #475569;
+}
+
+/* GLOW DIVIDER */
+
+.learning-path::after {
+  content: "";
+  display: block;
+
+  width: 85%;
+  max-width: 900px;
+  height: 2px;
+
+  margin: 50px auto 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #22d3ee,
+    #38bdf8,
+    #22d3ee,
+    transparent
+  );
+
+  box-shadow:
+    0 0 8px rgba(34, 211, 238, 0.7),
+    0 0 18px rgba(56, 189, 248, 0.45);
+
+  border-radius: 50%;
+}
+
+/* =========================
+   SECTION GLOW DIVIDERS
+========================= */
+
+.learning-path,
+.about-section {
+  position: relative;
+}
+
+.learning-path::after,
+.about-section::after {
+  content: "";
+  display: block;
+
+  width: 85%;
+  max-width: 900px;
+  height: 2px;
+
+  margin: 55px auto 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #22d3ee 25%,
+    #38bdf8 50%,
+    #22d3ee 75%,
+    transparent 100%
+  );
+
+  box-shadow:
+    0 0 6px #22d3ee,
+    0 0 15px rgba(34, 211, 238, 0.7),
+    0 0 30px rgba(56, 189, 248, 0.35);
+
+  border-radius: 50%;
+}

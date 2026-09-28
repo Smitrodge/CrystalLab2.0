@@ -1,0 +1,1421 @@
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* body {
+  overflow: hidden;
+} */
+
+.simulator-page {
+  width: 100%;
+  height: calc(100vh - 72px);
+
+  padding-left: 16px;
+  padding-right: 16px;
+
+  box-sizing: border-box;
+
+  background: #eef3f8;
+
+  overflow: hidden;
+}
+
+.simulator-section {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    390px minmax(0, 1fr);
+
+  gap: 18px;
+
+  min-height: 0;
+}
+
+/* =====================================================
+   LEFT CONTROL PANEL
+===================================================== */
+
+.simulator-controls {
+  height: 100%;
+
+  min-height: 0;
+
+  box-sizing: border-box;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe5ef;
+
+  border-radius: 18px;
+
+  overflow-y: auto;
+
+  box-shadow:
+    0 8px 30px
+      rgba(15, 23, 42, 0.06);
+}
+
+.simulator-heading span {
+  display: block;
+
+  font-size: 13px;
+
+  color: #0ea5c7;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.simulator-heading h1 {
+  margin: 5px 0 4px;
+
+  font-size: 32px;
+
+  line-height: 1.1;
+
+  color: #0f172a;
+}
+
+.simulator-heading p {
+  margin: 0 0 18px;
+
+  color: #475569;
+
+  line-height: 1.4;
+}
+
+.control-group {
+  margin-top: 16px;
+}
+
+.control-group > label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #0f172a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.structure-buttons,
+.mode-buttons {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 8px;
+}
+
+.mode-buttons {
+  grid-template-columns:
+    repeat(2, 1fr);
+}
+
+.structure-buttons button,
+.mode-buttons button {
+  min-height: 43px;
+
+  border: 1px solid #d7e2ec;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  color: #334155;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    border 0.2s;
+}
+
+.structure-buttons button:hover,
+.mode-buttons button:hover {
+  border-color: #22d3ee;
+}
+
+.structure-buttons button.selected,
+.mode-buttons button.selected {
+  background: #0ea5c7;
+
+  border-color: #0ea5c7;
+
+  color: white;
+}
+
+/* =====================================================
+   RANGE
+===================================================== */
+
+input[type="range"] {
+  width: 100%;
+
+  accent-color: #06b6d4;
+
+  cursor: pointer;
+}
+
+.range-value {
+  margin-top: 4px;
+
+  color: #334155;
+
+  font-size: 13px;
+}
+
+.formula {
+  margin-top: 5px;
+
+  color: #0891b2;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+/* =====================================================
+   MANUAL PARAMETERS
+===================================================== */
+
+.manual-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 9px;
+}
+
+.parameter {
+  padding: 9px;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+}
+
+.parameter > div {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 4px;
+}
+
+.parameter span {
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.parameter strong {
+  color: #0f172a;
+
+  font-size: 12px;
+}
+
+/* =====================================================
+   CHECK ROW
+===================================================== */
+
+.check-row {
+  min-height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 7px 11px;
+
+  margin-bottom: 7px;
+
+  box-sizing: border-box;
+
+  border-radius: 9px;
+
+  border: 1px solid #dbe5ef;
+
+  background: #f8fafc;
+
+  cursor: pointer;
+}
+
+.check-row input {
+  width: 18px;
+
+  height: 18px;
+
+  accent-color: #06b6d4;
+}
+
+.check-row span {
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+/* =====================================================
+   ATOMS PER UNIT CELL
+===================================================== */
+
+.atom-card {
+  margin-top: 17px;
+
+  padding: 15px;
+
+  border-radius: 13px;
+
+  border: 1px solid
+    rgba(6, 182, 212, 0.3);
+
+  background:
+    rgba(6, 182, 212, 0.05);
+}
+
+.atom-card h3 {
+  margin: 0 0 6px;
+
+  color: #0891b2;
+
+  font-size: 15px;
+}
+
+.atom-card p {
+  margin: 0 0 12px;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.contribution-button {
+  width: 100%;
+
+  min-height: 43px;
+
+  border-radius: 9px;
+
+  border: 1px solid #67e8f9;
+
+  background: #ecfeff;
+
+  color: #0891b2;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.contribution-button.active {
+  background: #06b6d4;
+
+  color: white;
+}
+
+.contribution-box {
+  margin-top: 12px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbeafe;
+}
+
+.contribution-box > div {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 5px 0;
+}
+
+.contribution-box span {
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.contribution-box strong {
+  color: #0f172a;
+}
+
+.contribution-box hr {
+  border: 0;
+
+  border-top: 1px solid #e2e8f0;
+
+  margin: 9px 0;
+}
+
+.big-formula {
+  display: block;
+
+  color: #7c3aed !important;
+
+  font-size: 16px;
+
+  margin-bottom: 5px;
+}
+
+.contribution-box small {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  line-height: 1.45;
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 8px;
+}
+
+.stat {
+  padding: 10px;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 10px;
+}
+
+.stat strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #0f172a;
+
+  font-size: 18px;
+}
+
+/* =====================================================
+   RESET
+===================================================== */
+
+.reset-button {
+  width: 100%;
+
+  min-height: 42px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  color: #475569;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =====================================================
+   RIGHT 3D VIEW
+===================================================== */
+
+.simulator-viewport {
+  position: relative;
+
+  min-width: 0;
+  min-height: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #07111f;
+
+  border: 1px solid #17324d;
+
+  box-shadow:
+    0 10px 35px
+      rgba(15, 23, 42, 0.12);
+}
+
+.three-container {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+.three-container canvas {
+  display: block;
+
+  width: 100% !important;
+
+  height: 100% !important;
+}
+
+/* =====================================================
+   VIEWPORT TOP
+===================================================== */
+
+.viewport-top {
+  position: absolute;
+
+  top: 17px;
+
+  left: 18px;
+
+  right: 18px;
+
+  z-index: 5;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  pointer-events: none;
+
+  color: #cbd5e1;
+
+  font-size: 12px;
+}
+
+.viewport-top div:first-child span {
+  display: block;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+}
+
+.viewport-top div:first-child strong {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #67e8f9;
+
+  font-size: 20px;
+}
+
+.viewport-top > div:last-child {
+  color: #cbd5e1;
+}
+
+/* =====================================================
+   BADGE
+===================================================== */
+
+.contribution-badge {
+  position: absolute;
+
+  top: 72px;
+
+  left: 18px;
+
+  z-index: 6;
+
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(34, 211, 238, 0.12);
+
+  border:
+    1px solid
+      rgba(34, 211, 238, 0.45);
+
+  color: #67e8f9;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  pointer-events: none;
+}
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.viewport-bottom {
+  position: absolute;
+
+  bottom: 15px;
+
+  left: 18px;
+
+  right: 18px;
+
+  z-index: 5;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  pointer-events: none;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+  body {
+    overflow: auto;
+  }
+
+  .simulator-page {
+    height: auto;
+
+    min-height: calc(100vh - 72px);
+
+    overflow: visible;
+  }
+
+  .simulator-section {
+    height: auto;
+
+    grid-template-columns: 1fr;
+  }
+
+  .simulator-controls {
+    height: auto;
+
+    max-height: none;
+  }
+
+  .simulator-viewport {
+    height: 600px;
+
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .simulator-page {
+    padding: 10px;
+  }
+
+  .simulator-controls {
+    padding: 16px;
+  }
+
+  .simulator-heading h1 {
+    font-size: 27px;
+  }
+
+  .viewport-bottom {
+    gap: 10px;
+
+    flex-wrap: wrap;
+  }
+}
+
+/* =====================================================
+   DISTANCE MEASUREMENT
+===================================================== */
+
+.measurement-card {
+  margin-top: 17px;
+
+  padding: 15px;
+
+  border-radius: 13px;
+
+  border: 1px solid
+    rgba(251, 191, 36, 0.35);
+
+  background:
+    rgba(251, 191, 36, 0.06);
+}
+
+.measurement-card h3 {
+  margin: 0 0 6px;
+
+  color: #d97706;
+
+  font-size: 15px;
+}
+
+.measurement-card p {
+  margin: 0 0 12px;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.measure-button {
+  width: 100%;
+
+  min-height: 43px;
+
+  border-radius: 9px;
+
+  border: 1px solid #fbbf24;
+
+  background: #fffbeb;
+
+  color: #b45309;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.measure-button.active {
+  background: #f59e0b;
+
+  color: white;
+}
+
+.measurement-result {
+  margin-top: 12px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  border: 1px solid #fde68a;
+
+  text-align: center;
+}
+
+.measurement-result span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+.measurement-result strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #d97706;
+
+  font-size: 24px;
+}
+
+.measurement-result small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+.clear-measurement {
+  width: 100%;
+
+  margin-top: 10px;
+
+  min-height: 35px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 7px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+.measurement-hint {
+  margin-top: 10px;
+
+  padding: 9px;
+
+  border-radius: 8px;
+
+  background: #fffbeb;
+
+  color: #92400e;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+.measure-badge {
+  position: absolute;
+
+  top: 72px;
+
+  right: 18px;
+
+  z-index: 6;
+
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(251, 191, 36, 0.12);
+
+  border:
+    1px solid
+      rgba(251, 191, 36, 0.55);
+
+  color: #fbbf24;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  pointer-events: none;
+}
+
+/* =====================================================
+   DARK MODE — MATCH NAVBAR
+===================================================== */
+
+.simulator-page {
+  background: #020b18;
+}
+
+/* LEFT PANEL */
+.simulator-controls {
+  background: #071321;
+  border-color: #17324d;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.25);
+
+  color: #e2e8f0;
+}
+
+/* Heading */
+.simulator-heading h1 {
+  color: #f8fafc;
+}
+
+.simulator-heading p {
+  color: #94a3b8;
+}
+
+.control-group > label {
+  color: #e2e8f0;
+}
+
+/* Structure + Mode buttons */
+.structure-buttons button,
+.mode-buttons button {
+  background: #0b1b2d;
+  border-color: #23415b;
+  color: #cbd5e1;
+}
+
+.structure-buttons button:hover,
+.mode-buttons button:hover {
+  border-color: #22d3ee;
+  background: #10263b;
+}
+
+.structure-buttons button.selected,
+.mode-buttons button.selected {
+  background: #0ea5c7;
+  border-color: #0ea5c7;
+  color: white;
+}
+
+/* Range value */
+.range-value {
+  color: #cbd5e1;
+}
+
+.formula {
+  color: #22d3ee;
+}
+
+/* Manual parameter cards */
+.parameter {
+  background: #0b1b2d;
+  border-color: #23415b;
+}
+
+.parameter span {
+  color: #94a3b8;
+}
+
+.parameter strong {
+  color: #e2e8f0;
+}
+
+/* Checkboxes */
+.check-row {
+  background: #0b1b2d;
+  border-color: #23415b;
+}
+
+.check-row span {
+  color: #cbd5e1;
+}
+
+/* Atom contribution */
+.atom-card {
+  background: rgba(6, 182, 212, 0.07);
+  border-color: rgba(34, 211, 238, 0.30);
+}
+
+.atom-card h3 {
+  color: #22d3ee;
+}
+
+.atom-card p {
+  color: #94a3b8;
+}
+
+.contribution-button {
+  background: #082b38;
+  border-color: #22d3ee;
+  color: #67e8f9;
+}
+
+.contribution-button:hover {
+  background: #0b3a4a;
+}
+
+.contribution-button.active {
+  background: #06b6d4;
+  color: white;
+}
+
+.contribution-box {
+  background: #0b1b2d;
+  border-color: #23415b;
+}
+
+.contribution-box span {
+  color: #94a3b8;
+}
+
+.contribution-box strong {
+  color: #e2e8f0;
+}
+
+.contribution-box hr {
+  border-top-color: #23415b;
+}
+
+.contribution-box small {
+  color: #94a3b8;
+}
+
+/* Stats */
+.stat {
+  background: #0b1b2d;
+  border-color: #23415b;
+}
+
+.stat span {
+  color: #94a3b8;
+}
+
+.stat strong {
+  color: #f1f5f9;
+}
+
+/* Reset */
+.reset-button {
+  background: #0b1b2d;
+  border-color: #23415b;
+  color: #cbd5e1;
+}
+
+.reset-button:hover {
+  background: #10263b;
+}
+
+/* Measurement */
+.measurement-card {
+  background: rgba(251, 191, 36, 0.06);
+}
+
+.measurement-card p {
+  color: #94a3b8;
+}
+
+.measure-button {
+  background: #2a210b;
+  color: #fbbf24;
+}
+
+.measurement-result {
+  background: #0b1b2d;
+  border-color: #6b4f16;
+}
+
+.measurement-result span {
+  color: #94a3b8;
+}
+
+.measurement-result small {
+  color: #94a3b8;
+}
+
+.clear-measurement {
+  background: #0b1b2d;
+  border-color: #23415b;
+  color: #94a3b8;
+}
+
+.measurement-hint {
+  background: #2a210b;
+  color: #fbbf24;
+}
+
+
+/* =====================================================
+   LIGHT MODE
+   Existing light design stays available
+===================================================== */
+
+body.light-mode .simulator-page {
+  background: #eef3f8;
+}
+
+body.light-mode .simulator-controls {
+  background: #ffffff;
+  border-color: #dbe5ef;
+  color: #0f172a;
+}
+
+body.light-mode .simulator-heading h1 {
+  color: #0f172a;
+}
+
+body.light-mode .simulator-heading p {
+  color: #475569;
+}
+
+body.light-mode .control-group > label {
+  color: #0f172a;
+}
+
+body.light-mode .structure-buttons button,
+body.light-mode .mode-buttons button {
+  background: #f8fafc;
+  border-color: #d7e2ec;
+  color: #334155;
+}
+
+body.light-mode .structure-buttons button:hover,
+body.light-mode .mode-buttons button:hover {
+  background: #f8fafc;
+}
+
+body.light-mode .parameter,
+body.light-mode .check-row,
+body.light-mode .stat,
+body.light-mode .contribution-box,
+body.light-mode .measurement-result {
+  background: #f8fafc;
+}
+
+body.light-mode .parameter span,
+body.light-mode .check-row span,
+body.light-mode .stat span,
+body.light-mode .contribution-box span,
+body.light-mode .measurement-result span {
+  color: #64748b;
+}
+
+body.light-mode .parameter strong,
+body.light-mode .stat strong,
+body.light-mode .contribution-box strong {
+  color: #0f172a;
+}
+
+body.light-mode .reset-button,
+body.light-mode .clear-measurement {
+  background: #f8fafc;
+  color: #475569;
+}
+
+body.light-mode .atom-card p,
+body.light-mode .measurement-card p,
+body.light-mode .contribution-box small,
+body.light-mode .measurement-result small {
+  color: #64748b;
+}
+
+/* =====================================================
+   APF CALCULATION
+===================================================== */
+
+.apf-card {
+  margin-top: 17px;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  background: #0b1b2d;
+
+  border: 1px solid #23415b;
+
+  color: #e2e8f0;
+}
+
+.apf-title span {
+  display: block;
+
+  color: #22d3ee;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+.apf-title h3 {
+  margin: 4px 0 10px;
+
+  color: #f8fafc;
+
+  font-size: 17px;
+}
+
+.apf-structure {
+  margin-bottom: 12px;
+
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  background: rgba(34, 211, 238, 0.08);
+
+  border: 1px solid rgba(34, 211, 238, 0.2);
+
+  color: #67e8f9;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.apf-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 6px 0;
+}
+
+.apf-row span {
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+.apf-row strong {
+  color: #e2e8f0;
+
+  font-size: 12px;
+}
+
+.apf-divider {
+  height: 1px;
+
+  margin: 11px 0;
+
+  background: #23415b;
+}
+
+.apf-formula {
+  margin-top: 11px;
+
+  padding: 11px;
+
+  border-radius: 9px;
+
+  background: #071321;
+
+  border: 1px solid #17324d;
+}
+
+.apf-formula span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+.apf-formula strong {
+  display: block;
+
+  color: #67e8f9;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.apf-formula p {
+  margin: 7px 0;
+
+  color: #cbd5e1;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+.apf-formula b {
+  display: block;
+
+  color: #a78bfa;
+
+  font-size: 14px;
+}
+
+.apf-formula.final {
+  border-color: rgba(167, 139, 250, 0.35);
+
+  background:
+    rgba(124, 58, 237, 0.08);
+}
+
+.apf-formula.final strong {
+  color: #c4b5fd;
+}
+
+.apf-formula.final b {
+  color: #fbbf24;
+
+  font-size: 18px;
+}
+
+.apf-efficiency {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 12px;
+
+  padding: 11px;
+
+  border-radius: 9px;
+
+  background: rgba(6, 182, 212, 0.08);
+
+  border: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+.apf-efficiency span {
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+.apf-efficiency strong {
+  color: #22d3ee;
+
+  font-size: 18px;
+}
+
+
+/* LIGHT MODE */
+
+body.light-mode .apf-card {
+  background: #ffffff;
+
+  border-color: #dbe5ef;
+
+  color: #0f172a;
+}
+
+body.light-mode .apf-title h3 {
+  color: #0f172a;
+}
+
+body.light-mode .apf-row span {
+  color: #64748b;
+}
+
+body.light-mode .apf-row strong {
+  color: #0f172a;
+}
+
+body.light-mode .apf-divider {
+  background: #e2e8f0;
+}
+
+body.light-mode .apf-formula {
+  background: #f8fafc;
+
+  border-color: #e2e8f0;
+}
+
+body.light-mode .apf-formula p {
+  color: #475569;
+}
+
+/* =========================================================
+   CRYSTAL LATTICE
+========================================================= */
+
+.lattice-card {
+    margin-top: 16px;
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid #23415f;
+    background: #0b1b2c;
+}
+
+.lattice-card h3 {
+    margin: 0 0 6px;
+    color: #e2e8f0;
+    font-size: 16px;
+}
+
+.lattice-card p {
+    margin: 0 0 14px;
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.lattice-button {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #2563eb;
+    border-radius: 10px;
+    background: #102a43;
+    color: #dbeafe;
+    cursor: pointer;
+    font-weight: 600;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.lattice-button:hover {
+    background: #163b5c;
+    transform: translateY(-1px);
+}
+
+.lattice-button.active {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.lattice-badge {
+    position: absolute;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+    padding: 8px 14px;
+    border-radius: 999px;
+
+    background: rgba(37, 99, 235, 0.15);
+    border: 1px solid rgba(96, 165, 250, 0.4);
+
+    color: #bfdbfe;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+
+    backdrop-filter: blur(8px);
+}
+
+.simulator-page {
+  padding-top: 90px;
+  padding-bottom: 0px;
+}

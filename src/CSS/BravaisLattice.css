@@ -1,0 +1,304 @@
+.bravais-section {
+  flex: 1;
+  min-width: 0;
+  padding: 42px 50px 80px;
+  color: #dceeff;
+  background: #111827;
+  overflow-x: hidden;
+}
+
+.bravais-header {
+  max-width: 900px;
+  margin-bottom: 36px;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.bravais-header h1 {
+  margin: 0 0 14px;
+  font-size: 38px;
+  color: #f8fafc;
+}
+
+.bravais-header p {
+  margin: 0;
+  max-width: 850px;
+  color: #a8bed3;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.bravais-theory {
+  max-width: 1100px;
+  margin-bottom: 42px;
+}
+
+.bravais-theory h2,
+.bravais-table-wrapper h2 {
+  margin: 0 0 14px;
+  color: #f8fafc;
+  font-size: 24px;
+}
+
+.bravais-theory h2:not(:first-child) {
+  margin-top: 34px;
+}
+
+.bravais-theory p {
+  max-width: 1050px;
+  margin: 0;
+  color: #a8bed3;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.bravais-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.flow-box {
+  min-width: 170px;
+  padding: 20px 24px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 14px;
+  background: rgba(9, 39, 72, 0.5);
+  text-align: center;
+}
+
+.flow-box strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #38bdf8;
+  font-size: 28px;
+}
+
+.flow-box span {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.flow-box.highlight {
+  border-color: rgba(250, 204, 21, 0.4);
+}
+
+.flow-box.highlight strong {
+  color: #facc15;
+}
+
+.flow-arrow {
+  color: #38bdf8;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.bravais-count {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.bravais-count > div {
+  padding: 18px;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 12px;
+  background: rgba(9, 39, 72, 0.45);
+  text-align: center;
+}
+
+.bravais-count strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #38bdf8;
+  font-size: 24px;
+}
+
+.bravais-count span {
+  color: #a8bed3;
+  font-size: 13px;
+}
+
+.bravais-count .total {
+  border-color: rgba(250, 204, 21, 0.3);
+}
+
+.bravais-count .total strong {
+  color: #facc15;
+}
+
+.bravais-table-wrapper {
+  width: 100%;
+}
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(56, 189, 248, 0.12);
+}
+
+.bravais-table {
+  width: 100%;
+  min-width: 1150px;
+  border-collapse: collapse;
+  background: rgba(7, 20, 36, 0.7);
+}
+
+.bravais-table th {
+  padding: 16px 14px;
+  background: rgba(14, 116, 144, 0.16);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.16);
+  color: #e0f2fe;
+  font-size: 13px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.bravais-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  color: #b8cbe0;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.bravais-table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.04);
+}
+
+.bravais-table td strong {
+  color: #e2e8f0;
+}
+
+.atom-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.1);
+  color: #67e8f9;
+  font-weight: 700;
+}
+
+.bravais-3d {
+  width: 180px;
+  height: 135px;
+  overflow: hidden;
+  border-radius: 12px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(14, 116, 220, 0.18),
+      transparent 65%
+    ),
+    #050f20;
+  border: 1px solid rgba(56, 189, 248, 0.16);
+}
+
+.bravais-3d canvas {
+  display: block;
+}
+
+body.light-mode .bravais-section {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+body.light-mode .bravais-header h1,
+body.light-mode .bravais-theory h2,
+body.light-mode .bravais-table-wrapper h2 {
+  color: #0f172a;
+}
+
+body.light-mode .bravais-header p,
+body.light-mode .bravais-theory p {
+  color: #475569;
+}
+
+body.light-mode .flow-box,
+body.light-mode .bravais-count > div {
+  background: #ffffff;
+  border-color: #dbeafe;
+}
+
+body.light-mode .flow-box span,
+body.light-mode .bravais-count span {
+  color: #475569;
+}
+
+body.light-mode .bravais-table {
+  background: #ffffff;
+}
+
+body.light-mode .bravais-table th {
+  background: #e0f2fe;
+  color: #0f172a;
+  border-bottom-color: #bae6fd;
+}
+
+body.light-mode .bravais-table td {
+  color: #475569;
+  border-bottom-color: #e2e8f0;
+}
+
+body.light-mode .bravais-table td strong {
+  color: #1e293b;
+}
+
+body.light-mode .bravais-3d {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(14, 116, 220, 0.12),
+      transparent 65%
+    ),
+    #eff6ff;
+  border-color: #bfdbfe;
+}
+
+@media (max-width: 1000px) {
+  .bravais-section {
+    padding: 35px 25px 60px;
+  }
+
+  .bravais-count {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .bravais-section {
+    padding: 30px 18px 50px;
+  }
+
+  .bravais-header h1 {
+    font-size: 30px;
+  }
+
+  .bravais-flow {
+    flex-direction: column;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .bravais-count {
+    grid-template-columns: 1fr 1fr;
+  }
+}
