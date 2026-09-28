@@ -1,43 +1,106 @@
 # CrystalLab
 
-### Problem Statement Fit
+## Problem Statement Fit
 
-State which problem statement you selected and explain how your project addresses it.
+### Selected Problem Statement
+**Unit Cells**
 
-### Target Users
+CrystalLab is an interactive educational platform designed to help students understand the concept of unit cells and crystal structures through structured theory and interactive 3D visualization.
 
-Describe who the project is for and what user pain points matter most.
+The project combines theoretical learning with a practical 3D environment so that students can move from understanding the concepts to visually exploring different unit-cell structures.
 
-### What We Built
+The learning flow covers the concepts step-by-step and leads students toward an interactive 3D practical where they can explore **Simple Cubic (SC), Body-Centered Cubic (BCC), and Face-Centered Cubic (FCC)** structures.
 
-Explain what the team actually built during the event.
+---
 
-### Core Features
+## Target Users
 
-- Feature 1
-- Feature 2
-- Feature 3
+CrystalLab is primarily designed for:
 
-### Technical Architecture
+- Class 11 and Class 12 students
+- JEE aspirants
+- Students learning Solid State and Crystal Structures
 
-Describe the system design, main components, and key technical decisions.
+The main problem addressed is the difficulty students face in visualizing three-dimensional crystal structures from traditional textbooks and static diagrams.
 
-### Tech Stack
+CrystalLab provides a more visual and interactive way to understand these concepts.
 
-List the main technologies, frameworks, services, and tools used.
+---
 
-### Innovation / Uniqueness
+## What We Built
 
-Explain what is novel, differentiated, or especially strong about the approach.
+During the event, we built an interactive web-based learning platform called **CrystalLab**.
 
-### Demo Instructions
+The website provides a structured learning journey:
 
-Explain how a judge can test the project quickly.
+**Homepage → Learning Path → Start Learning → Theory → 3D Practical**
 
-### Known Limitations
+The platform combines educational content with interactive 3D visualization to help students understand unit cells before exploring them practically.
 
-List the important constraints, unfinished parts, or reliability gaps.
+The main parts built during the event include:
 
-### Future Work
+- A dedicated homepage
+- Structured Learning Path
+- Theory section for learning crystal and unit-cell concepts
+- Interactive 3D Practical section
+- 3D visualization of cubic unit cells
+- SC, BCC and FCC structure selection
+- Interactive navigation between learning sections
+- Responsive desktop-oriented interface
+- Dark and light theme support
 
-Describe the next improvements you would make after the event.
+---
+
+## Core Features
+
+- **Structured Learning Path**  
+  Guides students from basic concepts toward unit-cell visualization.
+
+- **Interactive Theory Section**  
+  Provides a structured explanation of solid-state and crystal-structure concepts.
+
+- **3D Unit Cell Visualization**  
+  Allows students to visually explore crystal structures in a three-dimensional environment.
+
+- **SC, BCC and FCC Models**  
+  Provides interactive visualization of Simple Cubic, Body-Centered Cubic and Face-Centered Cubic unit cells.
+
+- **Interactive Navigation**  
+  Connects the learning content and practical visualization into a single learning experience.
+
+---
+
+## Technical Architecture
+
+CrystalLab is built as a frontend-focused interactive web application.
+
+The application is structured using React components, with separate sections for the homepage, theory, learning path and 3D practical.
+
+Hash-based navigation is used to move between major application pages without introducing a separate routing library.
+
+The 3D practical environment uses Three.js to create and render interactive three-dimensional crystal structures.
+
+The project currently does not use a backend or database because the primary focus of the event was the interactive educational experience and 3D visualization.
+
+### Architecture Overview
+
+```text
+User
+  │
+  ▼
+CrystalLab Web Application
+  │
+  ├── Homepage
+  │
+  ├── Learning Path
+  │
+  ├── Theory
+  │
+  └── 3D Practical
+        │
+        ├── SC
+        ├── BCC
+        └── FCC
+              │
+              ▼
+        Three.js 3D Visualization
